@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Promise</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input v-model="message"/>
+            <button @click="promiseTest">Click</button>
+            <ul>
+                <li v-for="msg in messages">{{msg}}</li>
+            </ul>
+        </div>
+    </body>
+    <script src="promise.js"></script>
+</html>

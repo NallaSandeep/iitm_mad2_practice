@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Hello World</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p style="color:red" v-bind:style="messageStyle">{{ message }}</p>
+            <p v-bind:style="{fontSize: fontSize + 'px'}">{{ sessionTimeout + ' seconds remaining..' }}</p>
+            Your Name: <input type="text" v-model="visitorName"></input>
+            <p v-if="count === 0">No Replies!</p>
+            <p v-else-if="count > 5">You are Popular!</p>
+            <p v-else>Number of Replies: {{count}}</p>
+            <button @:click="sayHi">Say Hi</button>
+            <h3>Visitors:</h3>
+            <ul>
+                <li v-for="name in visitors" v-if="name.length !== 0">{{name}}</li>
+            </ul>
+        </div>
+    </body>
+    <script src="application.js"></script>
+</html>
