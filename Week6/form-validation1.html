@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <form
+             id = "test"
+             method="post"
+             action="https://vuejs.org" 
+             @submit="checkForm">
+             <p v-if="errors.length">
+                <ul>
+                    <li v-for="error in errors">{{error}}</li>
+                </ul>
+             </p>
+            <p>
+                <label for="item1">Item 1:</label>
+                <input type="text" id="item1" name="item1" v-model="item1"/> 
+            </p>
+            <p>
+                <label for="item2">Item 2:</label>
+                <input type="text" id="item2" name="item2" v-model="item2"/> 
+            </p>
+            <p>
+                <label for="item3">Item 3:</label>
+                <input type="text" id="item3" name="item3" v-model="item3"/> 
+            </p>
+            <p>
+                <label for="item4">Item 4:</label>
+                <input type="text" id="item4" name="item4" v-model="item4"/> 
+            </p>
+            <p>Total: {{total}}</p>
+            
+            <p>
+                <input type="submit" value="Submit"/> 
+            </p>
+            </form>
+        </div>
+    </body>
+    <script src="form-validation1.js"></script>
+</html>

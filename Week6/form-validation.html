@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <form
+             id = "test"
+             method="post"
+             action="https://vuejs.org" 
+             @submit="checkForm">
+             <p v-if="errors.length">
+                <ul>
+                    <li v-for="error in errors">{{error}}</li>
+                </ul>
+             </p>
+             <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" v-model="name"/> 
+            </p>
+            <p>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" v-model="age" min="10"/> 
+            </p>
+            <p>
+                <label for="movie">Movies:</label>
+                <select id="movie" name="movie" v-model="movie"> 
+                    <option>RRR</option>
+                    <option>BB</option>
+                    <option>KGF</option>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="Submit"/> 
+            </p>
+            </form>
+        </div>
+    </body>
+    <script src="form-validation.js"></script>
+</html>

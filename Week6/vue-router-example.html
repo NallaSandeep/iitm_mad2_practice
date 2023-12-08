@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Router</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue-router@2/dist/vue-router.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>
+                <router-link to="/">Home</router-link>
+                <router-link to="/about">About</router-link>
+                <router-link to="/privacy-policy">Privacy Policy</router-link>
+                <router-link to="/user/Dude">Dude</router-link>
+                <router-link to="/user/test">test</router-link>
+            </p>
+            <router-view></router-view>
+        </div>
+    </body>
+    <script src="vue-router-example.js"></script>
+</html>

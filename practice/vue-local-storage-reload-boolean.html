@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Router</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input v-model="name" v-on:input="check"/>
+            <p :class="[isError ? 'btn btn-danger' : 'btn btn-success']">correct?</p>
+        </div>
+    </body>
+    <script src="vue-local-storage-reload-boolean.js"></script>
+</html>
